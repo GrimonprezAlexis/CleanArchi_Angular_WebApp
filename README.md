@@ -58,9 +58,11 @@ src/
 │   └── ... (autres modules et fichiers de présentation)
 └── ... (autres dossiers du projet)
 ```
+## Dependancies
+`pnpm add @angular/common @angular/core @angular/router rxjs tslib`
 
 
-Angular Clean Architecture Example
+## Angular Clean Architecture Example
 This project is an example of implementing Clean Architecture in an Angular application. Clean Architecture is a software design philosophy that emphasizes separation of concerns and maintainability by structuring applications into layers with clear dependencies.
 
 Overview
