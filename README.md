@@ -1,5 +1,6 @@
 Source: https://medium.com/taager-tech-blog/clean-architecture-for-angular-applications-b7ab140f0d5a
 
+```
 src/
 ├─ base/
 │  ├─ mapper.ts
@@ -23,9 +24,40 @@ src/
 │  │  │  │  ├─ user-repository.mapper.ts
 │  │  │  ├─ user-implementation.repository.ts
 │  ├─ data.module.ts
-├─ presentation/
-│  ├─ your_structure_for_components
-
+├── presentation/
+│   ├── @core/
+│   │   ├── auth/
+│   │   │   └── auth.guard.ts
+│   │   └── ... (autres fichiers core)
+│   ├── components/
+│   │   ├── home/
+│   │   │   ├── home.component.html
+│   │   │   ├── home.component.scss
+│   │   │   ├── home.component.ts
+│   │   │   └── home.component.spec.ts
+│   │   └── ... (autres composants)
+│   ├── modules/
+│   │   ├── users/
+│   │   │   ├── user-list/
+│   │   │   │   ├── user-list.component.html
+│   │   │   │   ├── user-list.component.scss
+│   │   │   │   ├── user-list.component.ts
+│   │   │   │   └── user-list.component.spec.ts
+│   │   │   ├── users-routing.module.ts
+│   │   │   ├── users.module.ts
+│   │   │   └── ... (autres fichiers users)
+│   │   ├── account/
+│   │   │   ├── account/
+│   │   │   │   ├── account.component.html
+│   │   │   │   ├── account.component.scss
+│   │   │   │   ├── account.component.ts
+│   │   │   │   └── account.component.spec.ts
+│   │   │   ├── account-routing.module.ts
+│   │   │   ├── account.module.ts
+│   │   │   └── ... (autres fichiers account)
+│   └── ... (autres modules et fichiers de présentation)
+└── ... (autres dossiers du projet)
+```
 
 
 Angular Clean Architecture Example
