@@ -11,11 +11,11 @@ import { UserModel } from 'src/domain/models/user.model';
 })
 export class UserImplementationRepository extends UserRepository {
   userMapper = new UserImplementationRepositoryMapper();
-  constructor(private http: HttpClient) {
+  constructor(private _http: HttpClient) {
     super();
   }
   login(params: { username: string; password: string }): Observable<UserModel> {
-    return this.http
+    return this._http
       .post<UserEntity>('https://example.com/login', { params })
       .pipe(map(this.userMapper.mapFrom));
   }
@@ -23,13 +23,16 @@ export class UserImplementationRepository extends UserRepository {
     phoneNum: string;
     password: string;
   }): Observable<UserModel> {
-    return this.http
+    return this._http
       .post<UserEntity>('https://example.com/register', { params })
       .pipe(map(this.userMapper.mapFrom));
   }
   getUserProfile(): Observable<UserModel> {
-    return this.http
+    return this._http
       .get<UserEntity>('https://example.com/user')
       .pipe(map(this.userMapper.mapFrom));
+  }
+  logout(): Observable<void> {
+    return this._http.post<void>('https://example.com/logout', {});
   }
 }

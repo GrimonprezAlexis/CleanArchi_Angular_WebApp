@@ -6,8 +6,8 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class GetUserProfileUseCase implements UseCase<void, UserModel> {
-  constructor(private userRepository: UserRepository) {}
+  constructor(private _userRepository: UserRepository) {}
   execute(): Observable<UserModel> {
-    return this.userRepository.getUserProfile();
+    return this._userRepository.getUserProfile();
   }
 }

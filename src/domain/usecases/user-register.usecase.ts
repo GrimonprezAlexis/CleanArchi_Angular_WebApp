@@ -8,11 +8,11 @@ import { Injectable } from '@angular/core';
 export class UserRegisterUseCase
   implements UseCase<{ phoneNum: string; password: string }, UserModel>
 {
-  constructor(private userRepository: UserRepository) {}
+  constructor(private _userRepository: UserRepository) {}
   execute(params: {
     phoneNum: string;
     password: string;
   }): Observable<UserModel> {
-    return this.userRepository.register(params);
+    return this._userRepository.register(params);
   }
 }

@@ -10,4 +10,5 @@ export abstract class UserRepository {
     password: string;
   }): Observable<UserModel>;
   abstract getUserProfile(): Observable<UserModel>;
+  abstract logout(): Observable<void>;
 }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { AccountComponent } from '@/app/components/account/account.component';
+import { AccountComponent } from '@/presentation/features/account/account.component';
 
 const routes: Routes = [{ path: '', component: AccountComponent }];
 

@@ -40,4 +40,9 @@ export class MockUserRepository extends UserRepository {
   getUserProfile(): Observable<UserModel> {
     return of(this.mockUser);
   }
+
+  // Mock logout method
+  logout(): Observable<void> {
+    return of();
+  }
 }
