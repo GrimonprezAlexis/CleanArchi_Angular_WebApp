@@ -4,31 +4,31 @@ src/
 ├─ app/
 │   ├── @core/
 │   │   ├── auth/
+        ├─ base/
+        │  ├─ mapper.ts
+        ├─ domain/
+        │  ├─ base/
+        │  |  ├─ use-case.ts
+        │  ├─ models/
+        │  │  ├─ user.model.ts
+        │  ├─ repositories/
+        │  │  ├─ user.repository.ts
+        │  ├─ usecases/
+        │  │  ├─ user-login.usecase.ts
+        │  │  ├─ user-register.usecase.ts
+        │  │  ├─ get-user-profile.usecase.ts
+        │  │  ├─ ...
+        ├─ data/
+        │  ├─ respositories/
+        │  │  ├─ user/
+        │  │  │  ├─ entities/
+        │  │  │  │  ├─ user-entity.ts
+        │  │  │  ├─ mappers/
+        │  │  │  │  ├─ user-repository.mapper.ts
+        │  │  │  ├─ user-implementation.repository.ts
+        │  ├─ data.module.ts
 │   │   ├── modules/
 │   │   ├── services/
-├─ base/
-│  ├─ mapper.ts
-├─ domain/
-│  ├─ base/
-│  |  ├─ use-case.ts
-│  ├─ models/
-│  │  ├─ user.model.ts
-│  ├─ repositories/
-│  │  ├─ user.repository.ts
-│  ├─ usecases/
-│  │  ├─ user-login.usecase.ts
-│  │  ├─ user-register.usecase.ts
-│  │  ├─ get-user-profile.usecase.ts
-│  │  ├─ ...
-├─ data/
-│  ├─ respositories/
-│  │  ├─ user/
-│  │  │  ├─ entities/
-│  │  │  │  ├─ user-entity.ts
-│  │  │  ├─ mappers/
-│  │  │  │  ├─ user-repository.mapper.ts
-│  │  │  ├─ user-implementation.repository.ts
-│  ├─ data.module.ts
 ├── presentation/
 │   ├── features/
 │   │   ├── home/

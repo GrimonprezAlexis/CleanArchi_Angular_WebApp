@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from '@/presentation/features/home/home.component';
+import { HomeComponent } from '@/app/@core/presentation/features/home/home.component';
 import { AuthGuard } from '@/app/@core/auth/auth.guard';
-import { LoginComponent } from '@/presentation/features/login/login.component';
+import { LoginComponent } from '@/app/@core/presentation/features/login/login.component';
 
 const routes: Routes = [
   // { path: '', component: HomeComponent, canActivate: [AuthGuard] },
@@ -10,14 +10,14 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () =>
-      import('@/presentation/features/login/modules/login.module').then(
-        (m) => m.LoginModule
-      ),
+      import(
+        '@/app/@core/presentation/features/login/modules/login.module'
+      ).then((m) => m.LoginModule),
   },
   {
     path: 'users',
     loadChildren: () =>
-      import('@/presentation/features/user/modules/user.module').then(
+      import('@/app/@core/presentation/features/user/modules/user.module').then(
         (m) => m.UsersModule
       ),
     canActivate: [AuthGuard],
@@ -25,9 +25,9 @@ const routes: Routes = [
   {
     path: 'account',
     loadChildren: () =>
-      import('@/presentation/features/account/modules/account.module').then(
-        (m) => m.AccountModule
-      ),
+      import(
+        '@/app/@core/presentation/features/account/modules/account.module'
+      ).then((m) => m.AccountModule),
     canActivate: [AuthGuard],
   },
 ];
